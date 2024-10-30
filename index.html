@@ -1,10 +1,321 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>PaymentMenu</title>
+    <script language="javascript">
+        var script = document.createElement('script');
+        //"rel": "view-paymentorder"
+         var url = "https://ecom.dev.payex.com/checkout/client/44bce5f1b653a39d501c815e787c0702541f5ffbdb45fca08a379bbaf0c10120?culture=en-US&_tc_tid=572116e17c4f67bb4c124876fd9db367";
+//var url = "http://localhost:5023/client/156fac57d47f49bf9455db0725b9ada0cd98fe89be922cb3d925c7206bbea355?culture=en-US&_tc_tid=26d700d7eb2042acad460a557380d8d9"
+        script.setAttribute('src', url);
+
+        script.onload = function () {
+            // When the 'view-checkout' script is loaded, we can initialize the
+            // Checkin inside our 'paymentmenu' container.
+            console.log(window.payex);
+
+            window.payex.hostedView.checkout({
+                container: "paymentMenu",
+                culture: 'nb-No',
+                // style: {
+                //             body:{
+                //                 backgroundColor: "black"
+                //             },
+                //             // label:{
+                //             //     backgroundColor: "black",
+                //             //     color:"white"
+                //             // },
+                //             menuCard:{
+                //                 backgroundColor: "black",
+                //                 selected: {
+                //                     backgroundColor: "black",
+                //                 }
+                //             },
+                //             // secondaryButton: {
+                //             //     backgroundColor: "white",
+                //             //     },
+                //             fontFace: [
+                //         {
+                //             fontStyle: "normal",
+                //             fontWeight: 600, fontFamily: "VolvoNovum", src: "url(https://ecom.externalintegration.payex.com/externalresourcehost/content/fonts/Volvo_VolvoNovumRegular.woff) format('woff')"
+                //         },
+                //     ]
+                //         },
+                style: {
+                    // menuCard: {
+                    //     backgroundColor: "#f9f8f6",
+                    //     margin: "16px 0 0 0",
+                    //     padding: "0 16px",
+                    //     boxShadow: "0 2px 0 #d4c4bc",
+                    //     border: "1px solid #d4c4bc",
+                    //     borderRadius: "2px",
+                    //     font: "bold 1.25rem SwedbankHeadlineBold, Arial, Verdana, Helvetica, sans-serif",
+                    //     color: "#512b2b",
+                    //     selected: {
+                    //         backgroundColor: "blue",
+                    //         highlightColor: "red"
+                    //     }
+                    // },
+                    // body: {
+                    //     backgroundColor: "white",
+                    //     font: "0.875rem Arial, Verdana, Helvetica, sans-serif",
+                    //     color: "#767676",
+                    //     validColor: "green",
+                    //     noticeColor: "yellow",
+                    //     invalidColor: "red"
+                    // },
+                    // instrumentCard: {
+                    //     font: "1rem Arial, Verdana, Helvetica, sans-serif",
+                    //     color: "#512b2b",
+                    //     border: "1px solid #d4c4bc",
+                    //     borderRadius: "2px",
+                    //     margin: "8px 0 0",
+                    //     padding: "8px 16px",
+                    //     selected: {
+                    //         backgroundColor: "blue",
+                    //         border: "1px solid red"
+                    //     }
+                    // },
+                    // label: {
+                    //     font: "1rem Arial, Verdana, Helvetica, sans-serif",
+                    //     padding: "0px 5px",
+                    //     borderRadius: "8px",
+                    //     margin: "16px 0px 0px 12px",
+                    //     color: "#72605e",
+                    //     backgroundColor: "white"
+                    // },
+                    // input: {
+                    //     font: "1rem Arial, Verdana, Helvetica, sans-serif",
+                    //     border: "1px solid #d4c4bc",
+                    //     borderRadius: "0",
+                    //     boxShadow: "none",
+                    //     backgroundColor: "white",
+                    //     color: "#512b2b",
+                    //     padding: "16px 0 16px 16px",
+                    //     focus: {
+                    //         border: "1px solid #a38b80"
+                    //     },
+                    //     invalid: {
+                    //         color: "#E9516D"
+                    //     }
+                    // },
+                    button: {
+                        backgroundColor: "blue",
+                        borderRadius: "3px",
+                        border: "0px",
+                        font: "bold 1.125rem SwedbankHeadlineBold, Arial, Verdana, Helvetica, sans-serif",
+                        color: "white",
+                        margin: "16px 0 0 0",
+                        padding: "15px",
+                        hover: {
+                            backgroundColor: "red",
+                            color: "blue",
+                        },
+                        disabled: {
+                            backgroundColor: "orange",
+                            color: "red",
+                        }
+                    },
+                    secondaryButton: {
+                        backgroundColor: "#31a3ae",
+                        borderRadius: "3px",
+                        border: "0px",
+                        font: "bold 1.125rem SwedbankHeadlineBold, Arial, Verdana, Helvetica, sans-serif",
+                        color: "white",
+                        margin: "16px 0 0 0",
+                        padding: "15px"
+                    },
+                    // infoBox: {
+                    //     backgroundColor: "#fbf2ea",
+                    //     padding: "8px 16px",
+                    //     font: "1rem Arial, Verdana, Helvetica, sans-serif",
+                    //     color: "#512b2b"
+                    // },
+                    // link: {
+                    //     color: "#007a88",
+                    //     padding: "0px"
+                    // }
+                },
+
+                onPaymentCreated: function onPaymentCreated(_) { console.log("Created", _) },//funker
+                onCheckoutLoaded: function onCheckoutLoaded(_) { console.log("Loaded", _) },//funker:
+                onCheckoutResized: function onCheckoutResized(_) { console.log("resized", _) },//funker:
+                onPaymentAttemptStarted  : function onPaymentAttemptStarted  (_) { console.log("Created", _) },//funker
+                onError: function onError(_) { console.log("onError", _) },//funker bruk avbrud in ledger app
+                onPaymentFailed: function onPaymentFailed(_) { console.log("Failed", _) },
+                onOutOfViewOpen: function onOutOfViewOpen(_) {console.log("onOutOfViewOpen", _)},
+                onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
+                onFailed: function onPaid(_) {console.log("onFailed", _)},
+                onPaymentCompleted: function onPaymentCompleted(_) {console.log("onPaymentCompleted",_)},
+                onPaymentTransactionFailed: function onPaymentTransactionFailed(_) {console.log("onPaymentTransactionFailed", _)},
+                onApplicationConfigured: function onApplicationConfigured(_) { console.log(_); },
+                onPaymentMenuInstrumentSelected: (_) => console.log(_),
+                onPaymentAborted: function onPaymentAborted(_) {console.log("onPaymentAborted", _)},
+                onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
+                //onExternalRedirect: function onExternalRedirect(_) {console.log("Externally redirecting", _)},
+                //onOutOfViewRedirect: function onOutOfViewRedirect(_) {console.log("onOutOfViewRedirect", _)},
+                onPaymentPending: function onPaymentPending(data) { console.log(data) },
+                onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
+                onPaymentToS: function onPaymentToS(data) { console.log(data) },
+
+
+
+            }).open();
+
+            // setTimeout(() => {
+            //     document.getElementById("closePaymentMenu").style.visibility = "visible";
+            // }, 1500);
+
+        };
+        // Append the Payment Menu script to the <head>
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(script);
+
+
+    </script>
+</head>
+
 <body>
+    <div id="startBankId"></div>
+    <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "startBankId()">startBankId</button>
+    <!-- <pre>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pre>
+    <pre>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pre>
+    <pre>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. -->
+    </pre>
+    <div style="display:flex;justify-content: center;width: 100%;min-height: 500px;align-items: center;">
+        <div style="display:flex;flex-direction:column; align-items: center; width: 70%;">
+            <div id="alert" style="color: #690422; font-weight: 600;font-size: 25px; margin:10px"></div>
+            <div id="paymentMenu" style="width: 100%;"></div>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId()">openBankId</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId2()">openBankId2</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId3()">openBankId3</button>
+        </div>
+        <div style="display:flex;justify-content: space-around;width: 20%; flex-direction: column;min-height: 150px;">
+            <!-- <button id="closePaymentMenu"
+                style="visibility: hidden; color:#fff;padding: 15px 22px; background-color: #690422; font-weight: 600;"
+                onclick="closePaymentMenu()">Close PaymentMenu</button>
+                <button onclick="updateCheckout()">Update to US Paymentmenu</button>
+                <button onClick= "cancelCheckout()">Cancel payment</button>
+        </div> -->
+    </div>
+    <!-- <pre>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pre>
+    <pre>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pre>
 
-<h1>The iframe element</h1>
+    <pre>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </pre> -->
 
-<iframe src="https://vitamina656.github.io/test-shop/" title="W3Schools Free Online Web Tutorials" width="600px" height="1000px">
+    <script language="javascript">
+        function startBankId() {
+            console.log("hello")
+            const event = new MouseEvent("click", {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+            });
+
+            var block = document.getElementById("startBankId");
+            var url = "https://ecom.stage.payex.com/checkout/client/cfef0182859e24efbd333757a9bc27716faa47cb676532a5af355f01e43ed6da?_tc_tid=726ad10701e832d2b83ce9d6ed337ac9";
+            var a = document.createElement('a');
+            a.setAttribute("href", url);
+            a.setAttribute("target", "_blank");
+            document.body.appendChild(a);
+
+            !a.dispatchEvent(event);
+            !a.remove();
+
+            if (cancelled) {
+                a.remove()
+            }
+
+
+        //     document.getElementById("startBankId").addEventListener("click", function(evt) {
+
+        //     var a = document.createElement('a');
+        //     a.setAttribute("href", url);
+        //     a.setAttribute("target", "_blank");
+
+        //     var dispatch = document.createEvent("HTMLEvents");
+        //     dispatch.initEvent("click", true, true);
+        //     a.dispatchEvent(dispatch);
+        // }, false);
+        }
+
+        function closePaymentMenu() {
+            window.payex.hostedView.paymentMenu().close();
+
+            document.getElementById("closePaymentMenu").style.visibility = "hidden";
+            document.getElementById("alert").innerHTML = "PaymentMenu has been closed";
+        };
+
+        function updateCheckout(){
+            window.payex.hostedView.paymentMenu().update({culture:"en-US"});
+        };
+        function cancelCheckout(){
+            window.payex.hostedView.paymentMenu().cancel();
+        };
+
+       function openBankId() {
+            window.location = "bankid:///?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null";
+            // opens bankId but only from mainframe, not working with iframe, sub frame on Safari iOS
+       }
+       function openBankId2() {
+            window.open('bankid:///?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null', '_blank');
+       }
+       function openBankId3() {
+            window.open('https://app.bankid.com/?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null', '_blank');
+       }
+
+    </script>
 
 </body>
+
 </html>
