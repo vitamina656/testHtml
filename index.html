@@ -8,8 +8,7 @@
     <script language="javascript">
         var script = document.createElement('script');
         //"rel": "view-paymentorder"
-         var url = "https://ecom.dev.payex.com/checkout/client/d4e3d8ebf41c421c552d3a48faef40cd9dbea2ca910604c1c0022209e1eaeede?culture=en-US&_tc_tid=2fe35f4ab8634e168ada7f2d8f8a1c98";
-//var url = "http://localhost:5023/client/156fac57d47f49bf9455db0725b9ada0cd98fe89be922cb3d925c7206bbea355?culture=en-US&_tc_tid=26d700d7eb2042acad460a557380d8d9"
+         var url = "https://ecom.dev.payex.com/checkout/client/55facd80264ffbe58b30fd628c1a7759f378ba6e329c85da4b8cebe8e12db30a?culture=en-US&_tc_tid=f4e771979aa94ab8b1c00fb7489fb221";
         script.setAttribute('src', url);
 
         script.onload = function () {
@@ -212,9 +211,7 @@
         <div style="display:flex;flex-direction:column; align-items: center; width: 70%;">
             <div id="alert" style="color: #690422; font-weight: 600;font-size: 25px; margin:10px"></div>
             <div id="paymentMenu" style="width: 100%;"></div>
-            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId()">openBankId</button>
-            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId2()">openBankId2</button>
-            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId3()">openBankId3</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "updateCheckout()">updateCheckout</button>
         </div>
         <div style="display:flex;justify-content: space-around;width: 20%; flex-direction: column;min-height: 150px;">
             <!-- <button id="closePaymentMenu"
