@@ -8,7 +8,7 @@
     <script language="javascript">
         var script = document.createElement('script');
         //"rel": "view-paymentorder"
-         var url = "https://ecom.dev.payex.com/checkout/client/invoice/21286cbe904ac74f626c465293477326a016d933e9b21e3096a98fdfe3fe1ea6?Culture=nb-NO&operation=authorize&_tc_tid=e979a9478bd14f6d9d11c740e88a14d3";
+         var url = "https://ecom.dev.payex.com/checkout/client/0c6e760086dfca2609da418d85adf5fbcb09c71941d14863bd17583a0c4fee25?culture=sv-SE&_tc_tid=c05f9693db0a4273830b7d79c4fce6c9";
         script.setAttribute('src', url);
 
         script.onload = function () {
@@ -163,7 +163,8 @@
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 onPaymentToS: function onPaymentToS(data) { console.log(data) },
                 onPaymentButtonPressed: function onPaymentButtonPressed(data) { 
-                    window.payex.hostedView.checkout().resume({paymentOrderId: "/psp/invoice/payments/4fbf3aa8-2fe7-4dd5-5342-08ddc73ae1a6", confirmation: true});            
+                    console.log(data);
+                    window.payex.hostedView.checkout().resume({paymentOrderId: "/psp/paymentorders/c2aa188b-0594-4d54-810a-08ddcb425e2d", confirmation: true});            
                 },
 
 
