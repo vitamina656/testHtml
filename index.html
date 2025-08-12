@@ -8,7 +8,7 @@
     <script language="javascript">
         var script = document.createElement('script');
         //"rel": "view-paymentorder"
-         var url = "https://ecom.dev.payex.com/checkout/client/589f6fc7d59ddfd3fbf72e90ffbe8e736e802537771e7a3c56a89e31b6fdd9a3?culture=sv-SE&_tc_tid=3d7a9ac71f2642a58cd8aabba60ef560";
+         var url = "https://ecom.dev.payex.com/checkout/client/86f2f2f816e59d6f3699c714a2184dc7487e893271462f8783c02902e194be1b?culture=sv-SE&_tc_tid=eb79011c383443638a8643b8a2f9eb00";
         script.setAttribute('src', url);
 
         script.onload = function () {
@@ -151,7 +151,7 @@
                 onOutOfViewOpen: function onOutOfViewOpen(_) {console.log("onOutOfViewOpen", _)},
                 onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
                 onFailed: function onPaid(_) {console.log("onFailed", _)},
-                onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted", data); window.location.href = data.redirectUrl;},
+                onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted", data);},
                 onPaymentTransactionFailed: function onPaymentTransactionFailed(_) {console.log("onPaymentTransactionFailed", _)},
                 onApplicationConfigured: function onApplicationConfigured(_) { console.log(_); },
                 onPaymentMenuInstrumentSelected: (_) => console.log(_),
