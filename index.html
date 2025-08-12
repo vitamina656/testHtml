@@ -151,7 +151,7 @@
                 onOutOfViewOpen: function onOutOfViewOpen(_) {console.log("onOutOfViewOpen", _)},
                 onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
                 onFailed: function onPaid(_) {console.log("onFailed", _)},
-                onPaymentCompleted: function onPaymentCompleted(_) {console.log("onPaymentCompleted",_)},
+                onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted",_); window.location.href = data.redirectUrl;},
                 onPaymentTransactionFailed: function onPaymentTransactionFailed(_) {console.log("onPaymentTransactionFailed", _)},
                 onApplicationConfigured: function onApplicationConfigured(_) { console.log(_); },
                 onPaymentMenuInstrumentSelected: (_) => console.log(_),
