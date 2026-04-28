@@ -8,7 +8,7 @@
     <script language="javascript">
         var script = document.createElement('script');
         //"rel": "view-paymentorder"
-         var url = "https://checkout.stage.swedbankpay.com/menu/client/91815c73b54683919cd445134e1fa1c0b473fd6417601f2cf5d0c7338023a968?culture=sv-SE&_tc_tid=16b172414aab4d64973280f2c1d57a91";
+         var url = "https://ecom.stage.payex.com/checkout/client/01856a3347fb2e140dd6e90ad588bc7c415bbd8cbd9d36d55719652d0c7f046a?culture=sv-SE&_tc_tid=fe43cd656a524045e4d6205840d5ba0a";
         script.setAttribute('src', url);
 
         script.onload = function () {
@@ -158,7 +158,7 @@
                 onPaymentAborted: function onPaymentAborted(_) {console.log("onPaymentAborted", _)},
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 //onExternalRedirect: function onExternalRedirect(_) {console.log("Externally redirecting", _)},
-                onOutOfViewRedirect: function onOutOfViewRedirect(data) {window.location.assign(data.redirectUrl);},
+                onOutOfViewRedirect: function onOutOfViewRedirect(data) {console.log("hello"); window.location.assign(data.redirectUrl);},
                 onPaymentPending: function onPaymentPending(data) { console.log(data) },
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 onPaymentToS: function onPaymentToS(data) { console.log(data) },
