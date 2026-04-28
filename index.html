@@ -158,7 +158,7 @@
                 onPaymentAborted: function onPaymentAborted(_) {console.log("onPaymentAborted", _)},
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 //onExternalRedirect: function onExternalRedirect(_) {console.log("Externally redirecting", _)},
-                //onOutOfViewRedirect: function onOutOfViewRedirect(_) {console.log("onOutOfViewRedirect", _)},
+                onOutOfViewRedirect: function onOutOfViewRedirect(data) {window.location.assign(data.redirectUrl);},
                 onPaymentPending: function onPaymentPending(data) { console.log(data) },
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 onPaymentToS: function onPaymentToS(data) { console.log(data) },
