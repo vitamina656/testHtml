@@ -148,7 +148,7 @@
                 onPaymentAttemptStarted  : function onPaymentAttemptStarted  (_) { console.log("Created", _) },//funker
                 onError: function onError(_) { console.log("onError", _) },//funker bruk avbrud in ledger app
                 onPaymentFailed: function onPaymentFailed(_) { console.log("Failed", _) },
-                // onOutOfViewOpen: function onOutOfViewOpen(_) {console.log("onOutOfViewOpen", _)},
+                onOutOfViewOpen: function onOutOfViewOpen(data) {window.location.assign(data.redirectUrl);},
                 onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
                 onFailed: function onPaid(_) {console.log("onFailed", _)},
                 onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted", data);},
