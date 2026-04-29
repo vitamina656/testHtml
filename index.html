@@ -148,7 +148,7 @@
                 onPaymentAttemptStarted  : function onPaymentAttemptStarted  (_) { console.log("Created", _) },//funker
                 onError: function onError(_) { console.log("onError", _) },//funker bruk avbrud in ledger app
                 onPaymentFailed: function onPaymentFailed(_) { console.log("Failed", _) },
-                onOutOfViewOpen: function onOutOfViewOpen(data) {window.location.assign(data.redirectUrl);},
+                // onOutOfViewOpen: function onOutOfViewOpen(data) {window.location.assign(data.redirectUrl);},
                 onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
                 onFailed: function onPaid(_) {console.log("onFailed", _)},
                 onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted", data);},
@@ -158,7 +158,7 @@
                 onPaymentAborted: function onPaymentAborted(_) {console.log("onPaymentAborted", _)},
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 //onExternalRedirect: function onExternalRedirect(_) {console.log("Externally redirecting", _)},
-                onOutOfViewRedirect: function onOutOfViewRedirect(data) {console.log("hello"); window.open(data.redirectUrl, '_blank', 'noopener,noreferrer');},
+                // onOutOfViewRedirect: function onOutOfViewRedirect(data) {console.log("hello"); window.open(data.redirectUrl, '_blank', 'noopener,noreferrer');},
                 onPaymentPending: function onPaymentPending(data) { console.log(data) },
                 onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
                 onPaymentToS: function onPaymentToS(data) { console.log(data) },
