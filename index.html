@@ -8,7 +8,7 @@
     <script language="javascript">
         var script = document.createElement('script');
         //"rel": "view-paymentorder"
-         var url = "https://ecom.stage.payex.com/checkout/client/c97689159bdd324affe207ac4bea02351dd9183434366681bdb4f791453ef425?culture=sv-SE&_tc_tid=b79c2a16fc56aba9656da734fb962953";
+         var url = "https://ecom.stage.payex.com/checkout/client/2abdc2423f08d900e58a629403073c7ac3fec3982535d8865b2de81419626f89?culture=sv-SE&_tc_tid=809e59f5279e571dec1d9a25d6981cc6";
         script.setAttribute('src', url);
 
         script.onload = function () {
@@ -67,139 +67,6 @@
 
     <div id="paymentMenu" style="width: 100%;"></div>
   
-    <!-- <pre>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </pre>
-    <pre>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </pre>
-    <pre>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </pre>
-    <!-- <div style="display:flex;justify-content: center;width: 100%;min-height: 500px;align-items: center;">
-        <div style="display:flex;flex-direction:column; align-items: center; width: 70%;">
-            <div id="alert" style="color: #690422; font-weight: 600;font-size: 25px; margin:10px"></div>
-            <div id="paymentMenu" style="width: 100%;"></div>
-            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "updateCheckout()">updateCheckout</button>
-        </div>
-        <div style="display:flex;justify-content: space-around;width: 20%; flex-direction: column;min-height: 150px;">
-            <!-- <button id="closePaymentMenu"
-                style="visibility: hidden; color:#fff;padding: 15px 22px; background-color: #690422; font-weight: 600;"
-                onclick="closePaymentMenu()">Close PaymentMenu</button>
-                <button onclick="updateCheckout()">Update to US Paymentmenu</button>
-                <button onClick= "cancelCheckout()">Cancel payment</button>
-        </div>
-    </div> -->
-    <!-- <pre>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </pre>
-    <pre>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </pre>
-
-    <pre>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </pre> -->
-
-    <!-- <script language="javascript">
-        function startBankId() {
-            console.log("hello")
-            const event = new MouseEvent("click", {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-            });
-
-            var block = document.getElementById("startBankId");
-            var url = "https://ecom.stage.payex.com/checkout/client/cfef0182859e24efbd333757a9bc27716faa47cb676532a5af355f01e43ed6da?_tc_tid=726ad10701e832d2b83ce9d6ed337ac9";
-            var a = document.createElement('a');
-            a.setAttribute("href", url);
-            a.setAttribute("target", "_blank");
-            document.body.appendChild(a);
-
-            !a.dispatchEvent(event);
-            !a.remove();
-
-            if (cancelled) {
-                a.remove()
-            } -->
-
-
-        //     document.getElementById("startBankId").addEventListener("click", function(evt) {
-
-        //     var a = document.createElement('a');
-        //     a.setAttribute("href", url);
-        //     a.setAttribute("target", "_blank");
-
-        //     var dispatch = document.createEvent("HTMLEvents");
-        //     dispatch.initEvent("click", true, true);
-        //     a.dispatchEvent(dispatch);
-        // }, false);
-        }
-
-        function closePaymentMenu() {
-            window.payex.hostedView.paymentMenu().close();
-
-            document.getElementById("closePaymentMenu").style.visibility = "hidden";
-            document.getElementById("alert").innerHTML = "PaymentMenu has been closed";
-        };
-
-        function updateCheckout(){
-            window.payex.hostedView.paymentMenu().update({culture:"en-US"});
-        };
-        function cancelCheckout(){
-            window.payex.hostedView.paymentMenu().cancel();
-        };
-
-       function openBankId() {
-            window.location = "bankid:///?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null";
-            // opens bankId but only from mainframe, not working with iframe, sub frame on Safari iOS
-       }
-       function openBankId2() {
-            window.open('bankid:///?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null', '_blank');
-       }
-       function openBankId3() {
-            window.open('https://app.bankid.com/?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null', '_blank');
-       }
-
-    <!-- </script> -->
-
 </body>
 
 </html>
