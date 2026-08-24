@@ -8,7 +8,7 @@
     <script language="javascript">
         var script = document.createElement('script');
         //"rel": "view-paymentorder"
-         var url = "https://ecom.externalintegration.payex.com/checkout/client/c4df739fa2dcbf837700136d85c4560ebf0f06a29724a85309139e82f0764a38?culture=sv-SE&_tc_tid=53d9139a8202c674e3135e11b7e8c17d";
+         var url = "https://ecom.externalintegration.payex.com/checkout/client/948b8ab6b6bde3411a912b323d3070bb0b7061891bced6a40a375cf709fbc346?culture=sv-SE&_tc_tid=78db2e65072ce9722a7bea65e1fc664a";
         script.setAttribute('src', url);
 
         script.onload = function () {
@@ -20,26 +20,26 @@
                 container: "paymentMenu",
                 // theme: "dark",
                 culture: 'nb-No',
-                onPaymentCreated: function onPaymentCreated(_) { console.log("Created", _) },//funker
-                onCheckoutLoaded: function onCheckoutLoaded(_) { console.log("Loaded", _) },//funker:
-                onCheckoutResized: function onCheckoutResized(_) { console.log("resized", _) },//funker:
-                onPaymentAttemptStarted  : function onPaymentAttemptStarted  (_) { console.log("Created", _) },//funker
-                onError: function onError(_) { console.log("onError", _) },//funker bruk avbrud in ledger app
-                onPaymentFailed: function onPaymentFailed(_) { console.log("Failed", _) },
-                // onOutOfViewOpen: function onOutOfViewOpen(data) {window.location.assign(data.redirectUrl);},
-                onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
-                onFailed: function onPaid(_) {console.log("onFailed", _)},
-                onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted", data);},
-                onPaymentTransactionFailed: function onPaymentTransactionFailed(_) {console.log("onPaymentTransactionFailed", _)},
-                onApplicationConfigured: function onApplicationConfigured(_) { console.log(_); },
-                onPaymentMenuInstrumentSelected: (_) => console.log(_),
-                onPaymentAborted: function onPaymentAborted(_) {console.log("onPaymentAborted", _)},
-                onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
-                //onExternalRedirect: function onExternalRedirect(_) {console.log("Externally redirecting", _)},
-                // onOutOfViewRedirect: function onOutOfViewRedirect(data) {console.log("hello"); window.open(data.redirectUrl, '_blank', 'noopener,noreferrer');},
-                onPaymentPending: function onPaymentPending(data) { console.log(data) },
-                onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
-                onPaymentToS: function onPaymentToS(data) { console.log(data) },
+                // onPaymentCreated: function onPaymentCreated(_) { console.log("Created", _) },//funker
+                // onCheckoutLoaded: function onCheckoutLoaded(_) { console.log("Loaded", _) },//funker:
+                // onCheckoutResized: function onCheckoutResized(_) { console.log("resized", _) },//funker:
+                // onPaymentAttemptStarted  : function onPaymentAttemptStarted  (_) { console.log("Created", _) },//funker
+                // onError: function onError(_) { console.log("onError", _) },//funker bruk avbrud in ledger app
+                // onPaymentFailed: function onPaymentFailed(_) { console.log("Failed", _) },
+                // // onOutOfViewOpen: function onOutOfViewOpen(data) {window.location.assign(data.redirectUrl);},
+                // onPaid: function onPaid(_) {console.log("onPaymentPaid", _)},
+                // onFailed: function onPaid(_) {console.log("onFailed", _)},
+                // onPaymentCompleted: function onPaymentCompleted(data) {console.log("onPaymentCompleted", data);},
+                // onPaymentTransactionFailed: function onPaymentTransactionFailed(_) {console.log("onPaymentTransactionFailed", _)},
+                // onApplicationConfigured: function onApplicationConfigured(_) { console.log(_); },
+                // onPaymentMenuInstrumentSelected: (_) => console.log(_),
+                // onPaymentAborted: function onPaymentAborted(_) {console.log("onPaymentAborted", _)},
+                // onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
+                // //onExternalRedirect: function onExternalRedirect(_) {console.log("Externally redirecting", _)},
+                // // onOutOfViewRedirect: function onOutOfViewRedirect(data) {console.log("hello"); window.open(data.redirectUrl, '_blank', 'noopener,noreferrer');},
+                // onPaymentPending: function onPaymentPending(data) { console.log(data) },
+                // onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
+                // onPaymentToS: function onPaymentToS(data) { console.log(data) },
                 // onPaymentButtonPressed: function onPaymentButtonPressed(data) { 
                 //     console.log(data);
                 //     window.payex.hostedView.checkout().resume({paymentOrderId: "/psp/paymentorders/991cdbd3-ef1f-4f71-1484-08ddcb408dec", confirmation: false});            
